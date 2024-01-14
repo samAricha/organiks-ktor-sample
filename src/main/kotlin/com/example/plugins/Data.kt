@@ -1,6 +1,9 @@
 package com.example.plugins
 
 
+import com.example.data.mysql.migrations.migration1
+import com.example.data.mysql.seeders.eggCollectionsDemoData
+import com.example.data.mysql.seeders.personDemoData
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -14,7 +17,10 @@ fun Application.configureDataBase() {
 
     transaction(database) {
         //migrations
+        migration1()
         //seeders
+        personDemoData()
+        eggCollectionsDemoData()
 
     }
 

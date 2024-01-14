@@ -2,8 +2,9 @@ package com.example.data.mysql.seeders
 
 import com.example.domain.repository.PersonRepository
 import com.example.data.remote.dto.address.CreateAddressDto
+import com.example.data.remote.dto.egg_collection.CreateEggCollectionDto
 import com.example.data.remote.dto.person.CreatePersonDto
-import com.example.domain.model.UserModel
+import com.example.domain.repository.EggCollectionRepository
 
 fun personDemoData(){
     val repository = PersonRepository()
@@ -21,11 +22,10 @@ fun personDemoData(){
         repository.create(CreatePersonDto("Megan", "Miller", 22))
 }
 
-fun usersDemoData(){
-    val repository = UserRepositoryImpl()
+fun eggCollectionsDemoData(){
+    val repository = EggCollectionRepository()
 
-    repository.addUser(UserModel("John", "Doe", "01-11-1997", "M"))
-
-    repository.addUser(UserModel("George", "Smith", "12-08-1997", "M"))
-    repository.addUser(UserModel("Megan", "Miller", "30-03-1997", "F"))
+//    repository.create(CreateEggCollectionDto("John", "Doe", "01-11-1997", "M"))
+//    repository.create(CreateEggCollectionDto("George", "Smith", "12-08-1997", "M"))
+//    repository.create(CreateEggCollectionDto("Megan", "Miller", "30-03-1997", "F"))
 }
