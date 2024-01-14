@@ -4,7 +4,6 @@ package com.example.routes
 import com.example.data.remote.dto.egg_collection.CreateEggCollectionDto
 import com.example.data.remote.dto.egg_collection.EggCollectionDTO
 import com.example.domain.repository.EggCollectionRepository
-import com.example.domain.repository.PersonRepository
 import com.example.util.GenericResponse
 import io.ktor.http.*
 import io.ktor.server.application.*
